@@ -1,15 +1,13 @@
-<!DOCTYPE html>
+   <!DOCTYPE html>
 <html style="scroll-behavior: smooth">
 <head>
      <meta charset="UTF-8">
     <style>
-    /* CSS Reset */
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-
+         * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
     body {
         background-color: #2ab6ff;
         text-align: center;
@@ -23,20 +21,31 @@
         margin-top: 0;
     }
     h1 {
-        font-size: 70px;
+        color: #fff176;
+        z-index: 2;
+        margin-top: 0;
+        font-size:70px;
     }
     h2 {
-        font-size: 40px;
+        color: #fff176;
+        z-index: 2;
+        margin-top: 0;
+        font-size:40px;
     }
-    .ste h2 {
+    .stre h2 {
+        color: #fff176;
+        z-index: 2;
+        margin-top: 0;
+        font-size:40px;
         animation: scrolll linear;
         animation-timeline: view();
-        animation-range-end: 500px;
-        animation-range-start: -100px;
+        animation-range-end:500px;
+        animation-range-start:-100px;
+        //opacity:0;
     }
-    @keyframes scrolll {
-        from {opacity: 0;}
-        to {opacity: 1}
+    @keyframes scrolll{
+    from {opacity:0;}
+    to {opacity:1}
     }
     #logo {
         width: 8vh;
@@ -54,23 +63,37 @@
         border-radius: 5px;
         width: 20vw;
         height: 10vw;
-        font-size: 2.5vw;
+        font-size:2.5vw;
         font-weight: bold;
         transition: width 0.12s, height 0.12s, box-shadow 0.12s, font-size 0.12s;
     }
     button:hover {
         width: 21.5vw;
         height: 11.5vw;
+        border: none;
+        border-radius: 5px;
+        font-size:2.6vw;
         box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+        transition: width 0.12s, height 0.12s, box-shadow 0.12s, font-size 0.12s;
     }
     .ste {
-        margin-top: 5vh;
+        margin-top: 5vh; /* Aangepaste waarde voor betere uitlijning */
         display: flex;
-        justify-content: space-around;
+        justify-content: space-around; /* Ruimte tussen tekst en afbeelding */
         align-items: center;
     }
+    .ste h2 {
+    color: #fff176;
+    z-index: 2;
+    margin-top: 0;
+    font-size: 4vw;
+    animation: scrolll linear;
+    animation-timeline: view();
+    animation-range-end: 500px;
+    animation-range-start: -100px;
+}
     .zin, .zinn {
-        width: 40%;
+        width: 40%; /* Aangepaste breedte voor tekstblokken */
         height: 100vh;
         background-color: rgba(0, 0, 0, 0);
         display: flex;
@@ -78,15 +101,31 @@
         justify-content: center;
         align-items: center;
     }
-    .zinimg, .zinnimg {
-        width: 40%;
+    .zinn {
+        width: 40%; /* Aangepaste breedte voor tekstblokken */
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .zinimg .zinnimg {
+        width: 40%; /* Aangepaste breedte voor afbeeldingsblokken */
+        height: 80vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .zinnimg {
+        width: 40%; /* Aangepaste breedte voor afbeeldingsblokken */
         height: 80vh;
         display: flex;
         justify-content: center;
         align-items: center;
     }
     .foto {
-        max-width: 90%;
+        max-width: 90%; /* Zorg ervoor dat afbeeldingen niet breder zijn dan hun container */
         max-height: 90%;
     }
     #slogan {
@@ -95,69 +134,94 @@
     }
     .container {
         width: 100vw;
+        height: auto;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
     }
     .thema {
         width: 30vw;
+        height: auto;
         background-color: white;
         display: inline-block;
         margin: 5px;
         border-radius: 5px;
-        max-width: 350px;
-        max-height: 3050px;
+        max-width:350px;
+        max-height:3050px;
     }
     .thema h3 {
         color: #2ab6ff;
-        font-size: 3vw;
-        font-weight: bold;
+        font-size:3vw;
+        font-weight:bold;
     }
     .thema p {
         color: #63c9ff;
-        font-size: 2vw;
+        font-size:2vw;
     }
-    #stre {
-        background-color: #fff176;
-        color: #2ab6ff;
-        width: 102vw;
-        margin: 0 auto;
+    #stre{
+    background-color: #fff176;
+    color:#2ab6ff;
+    width:102vw;
+    margin-left:auto;
+    margin-right:auto;
     }
-    #stre h2 {
-        color: #2ab6ff;
-        font-size: 4vw;
+    #stre h2{
+    color:#2ab6ff;
+    font-size:4vw;
     }
     .hero {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        width: 100%;
-        flex-direction: column;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+}
+    button{
+    font-size:2.5vw;
     }
-    button {
-        font-size: 2.5vw;
+    .hero h1 {
+    vertical-align: middle;
+    margin-left:auto;
+    margin-right:auto;
+    justify-content: center;
+    align-items: center;
     }
-    .hero h1, .hero button, .hero h3 {
-        vertical-align: middle;
+    .hero button {
+    vertical-align: middle;
+    margin-left:auto;
+    margin-right:auto;
+    justify-content: center;
+    align-items: center;
+    }
+    .hero h3 {
+    vertical-align: middle;
+    margin-left:auto;
+    margin-right:auto;
+    justify-content: center;
+    align-items: center;
     }
     svg {
-        width: 5vw;
-        height: 5vw;
-        transition: fill 0.12s;
-        max-width: 35px;
-        max-height: 35px;
+    width:5vw;
+    height:5vw;
+    transition: fill 0.12s;
+    max-width:35px;
+    max-height:35px;
     }
     svg:hover {
-        fill: #fff176;
-        transition: fill 0.32s;
+    width:5vw;
+    height:5vw;
+    fill:#fff176;
+    transition: fill 0.32s;
+    max-width:35px;
+    max-height:35px;
     }
 </style>
 
 </head>
 <body>
     <div class="vanbuiten">
-    <img id="logo" src="https://th.bing.com/th/id/OIG1.P7wX.ZocTS8F5bi1kr4q?w=1024&h=1024&rs=1&pid=ImgDetMain" alt="Logo">
+    <img id="logo"src="https://th.bing.com/th/id/OIG1.P7wX.ZocTS8F5bi1kr4q?w=1024&h=1024&rs=1&pid=ImgDetMain"></img>
     <div class="hero">
     <h1>BDayr</h1>
     <br>
@@ -175,14 +239,14 @@
         <h2 id="specialehwaarvooriknueenandereanimationmoedoenomdatdielastigdoetmedeherosection">Verwen uw kind met het ultieme verjaardagsfeestje thuis met onze feestpakketten!</h2>
         </div>
         <div class="zinimg">
-        <img class="foto" src="https://www.animaker.com/hub/wp-content/uploads/2022/10/image-removebg-preview-17-181x300.png" alt="Feestpakketten">
+        <img class="foto" src="https://www.animaker.com/hub/wp-content/uploads/2022/10/image-removebg-preview-17-181x300.png"></img>
         </div>
     </div>
     <br>
     <br>
-    <div id="stre" class="ste">
+    <div id="stre"class="ste">
             <div class="zinnimg">
-        <img class="foto" src="https://www.animaker.com/static_2.0/img/presentationsoftware/character-1@2x.png" alt="Animaties">
+        <img class="foto" src="https://www.animaker.com/static_2.0/img/presentationsoftware/character-1@2x.png"></img>
         </div>
         <div class="zinn">
             <br>
@@ -199,7 +263,7 @@
         <h2>Alles wat u nodig heeft voor een stressvrij en magisch feest.</h2>
         </div>
         <div class="zinimg">
-        <img class="foto" src="https://www.animaker.com/hub/wp-content/uploads/2022/10/image-removebg-preview-8.png" alt="Magisch feest">
+        <img class="foto" src="https://www.animaker.com/hub/wp-content/uploads/2022/10/image-removebg-preview-8.png"></img>
         </div>
     </div>
     <br>
@@ -207,25 +271,80 @@
     <h2>Onze Thema's</h2>
     <br>
     <div id="themass" class="container">
-    <div class="thema">
-        <h3>Jungle Avontuur</h3>
-        <br>
-        <p>Laat de kinderen op avontuur gaan in de jungle met leuke activiteiten en spelletjes.</p>
-    </div>
-    <div class="thema">
-        <h3>Prinsessenbal</h3>
-        <br>
-        <p>Een magisch bal voor alle kleine prinsessen, inclusief knutselen en dansen.</p>
-    </div>
-    <div class="thema">
-        <h3>Superheldenfeest</h3>
-        <br>
-        <p>Verander de kinderen in superhelden met onze kostuums en uitdagingen.</p>
-    </div>
+        <div onclick="uitleg('superhelden')" class="thema" id="superhelden"><h3>Superhelden</h3>
+        <p>Willen jij en je vrienden ook een superheld worden van Team M?</p>
+        <p>leeftijd: 7-9 jaar</p>
+        <p>duur: 1.5 uur</p>
+        <p>prijs: €15</p>
+        </div>
+        <div onclick="uitleg('dino')" class="thema" id="dino"><h3>Dino's</h3>
+        <p>Helpen jullie dino Barrie zijn vriend Jefry terug te vinden?</p>
+        <p>leeftijd: 5-7 jaar</p>
+        <p>duur: 1 uur</p>
+        <p>prijs: €13</p>
+        </div>
+        <div onclick="uitleg('Piraten')" class="thema" id="Piraten"><h3>Piraten</h3>
+        <p>Gaan jullie samen met Kapitein Jack op missie?</p>
+        <p>leeftijd: 7-10 jaar</p>
+        <p>duur: 1.5 uur</p>
+        <p>prijs: €15</p></div>
+        <div onclick="uitleg('Eenhoorns')" class="thema" id="Eenhoorns"><h3>Eenhoorns</h3>
+        <p>Kom mee naar wonderland, het land van de eenhoorns!</p>
+        <p>leeftijd: 6-9 jaar</p>
+        <p>duur: 1.5 uur</p>
+        <p>prijs: €15</p></div>
+        <div onclick="uitleg('Prinsessen')" class="thema" id="Prinsessen"><h3>Prinsessen</h3>
+        <p>Worden jullie ook een prinses en helpen jullie prinses Julia?</p>
+        <p>leeftijd: 7-10 jaar</p>
+        <p>duur: 1.5 uur</p>
+        <p>prijs: €15</p>
+        </div>
+        <div onclick="uitleg('ruimte')" class="thema" id="ruimte"><h3>Ruimte</h3>
+        <p>Gaan jullie mee op reis naar een geheimzinnige planeet?</p>
+        <p>leeftijd: 7-11 jaar</p>
+        <p>duur: 1.5 uur</p>
+        <p>prijs: €15</p>
+        </div>
+        <div onclick="uitleg('jungle')" class="thema" id="jungle"><h3>Jungle</h3>
+        <p>Ontdekken jullie samen met Max de jungle?</p>
+        <p>leeftijd: 7-11 jaar</p>
+        <p>duur: 1.5 uur</p>
+        <p>prijs: €15</p>
+        </div>
+        <div onclick="uitleg('circus')" class="thema" id="circus"><h3>Circus</h3>
+        <p>Wordt een echte clown en beleef een zot avontuur met clown Bollie!</p>
+        <p>leeftijd: 5-7 jaar</p>
+        <p>duur: 1 uur</p>
+        <p>prijs: €13</p>
+        </div>
+        <div onclick="uitleg('sporten')" class="thema" id="sport"><h3>Sporten</h3>
+        <p>Worden jullie echte top-sporters en winnen jullie de olympische spelen?</p>
+        <p>leeftijd: 10-12 jaar</p>
+        <p>duur: 2 uur</p>
+        <p>prijs: €17</p>
+        </div>
     </div>
     <br>
+    <h1>meer info</h1>
+    <h2>Na de betaling</h2>
+    <p>na betaling ontvangt u binnen de 24 uur een digitaale handleiding voor de ouders en een toegangscode voor de website.</p>
+    <p>In de handleiding wordt uitgbebreid uitgelegd wat de ouders moeten klaarzetten en organiseren zodat alles goed verloopt.</p>
+    <p>De toegangscode kan 2 keer worden gebruikt. 1 keer voor te testen, 1 keer voor op het feestje. Na het feest vervalt de toeganscode en kan deze niet meer gebruikt worden.</p>
+    <h2>Over het feest</h2>
+    <p>Voor al onze feestpakketten is er minstens 1 begeleider nodig.</p>
+    <p>alle spellen kunnen binnen en buiten worden gespeelt.</p>
+    <p>Alle feestpakketten zijn geschikt voor 4-10 kinderen.</p>
     <br>
-</div>
-</div>
-</body>
-</html>
+    <br>
+    <h2>contact</h2>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M448 209.9a210.1 210.1 0 0 1 -122.8-39.3V349.4A162.6 162.6 0 1 1 185 188.3V278.2a74.6 74.6 0 1 0 52.2 71.2V0l88 0a121.2 121.2 0 0 0 1.9 22.2h0A122.2 122.2 0 0 0 381 102.4a121.4 121.4 0 0 0 67 20.1z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 50 50"><path d="M12 23.403V23.39 10.389L11.88 10.3h-.01L9.14 8.28C7.47 7.04 5.09 7.1 3.61 8.56 2.62 9.54 2 10.9 2 12.41v3.602L12 23.403zM38 23.39v.013l10-7.391V12.41c0-1.49-.6-2.85-1.58-3.83-1.46-1.457-3.765-1.628-5.424-.403L38.12 10.3 38 10.389V23.39zM14 24.868l10.406 7.692c.353.261.836.261 1.189 0L36 24.868V11.867L25 20l-11-8.133V24.868zM38 25.889V41c0 .552.448 1 1 1h6.5c1.381 0 2.5-1.119 2.5-2.5V18.497L38 25.889zM12 25.889L2 18.497V39.5C2 40.881 3.119 42 4.5 42H11c.552 0 1-.448 1-1V25.889z"></path></svg>
+    <a href="https://lrsw.w3spaces.com/FeestFabriek.html"><svg width="800px" height="800px" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" stroke-width="3" stroke="#000000" fill="none"><path d="M39.93,55.72A24.86,24.86,0,1,1,56.86,32.15a37.24,37.24,0,0,1-.73,6"/><path d="M37.86,51.1A47,47,0,0,1,32,56.7"/><path d="M32,7A34.14,34.14,0,0,1,43.57,30a34.07,34.07,0,0,1,.09,4.85"/><path d="M32,7A34.09,34.09,0,0,0,20.31,32.46c0,16.2,7.28,21,11.66,24.24"/><line x1="10.37" y1="19.9" x2="53.75" y2="19.9"/><line x1="32" y1="6.99" x2="32" y2="56.7"/><line x1="11.05" y1="45.48" x2="37.04" y2="45.48"/><line x1="7.14" y1="32.46" x2="56.86" y2="31.85"/><path d="M53.57,57,58,52.56l-8-8,4.55-2.91a.38.38,0,0,0-.12-.7L39.14,37.37a.39.39,0,0,0-.46.46L42,53.41a.39.39,0,0,0,.71.13L45.57,49Z"/></svg></a>
+    <br>
+    </div>
+    <script>
+        function uitleg(hetthema){
+        }
+    </script>
+</body> 
