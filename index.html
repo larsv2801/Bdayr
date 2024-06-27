@@ -3,11 +3,6 @@
 <head>
      <meta charset="UTF-8">
     <style>
-         * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
     body {
         background-color: #2ab6ff;
         text-align: center;
@@ -31,6 +26,17 @@
         z-index: 2;
         margin-top: 0;
         font-size:40px;
+    }
+   .ste h2 {
+        color: #fff176;
+        z-index: 2;
+        margin-top: 0;
+        font-size:40px;
+        animation: scrolll linear;
+        animation-timeline: view();
+        animation-range-end:500px;
+        animation-range-start:-100px;
+        //opacity:0;
     }
     .stre h2 {
         color: #fff176;
@@ -82,16 +88,9 @@
         justify-content: space-around; /* Ruimte tussen tekst en afbeelding */
         align-items: center;
     }
-    .ste h2 {
-    color: #fff176;
-    z-index: 2;
-    margin-top: 0;
-    font-size: 4vw;
-    animation: scrolll linear;
-    animation-timeline: view();
-    animation-range-end: 500px;
-    animation-range-start: -100px;
-}
+    .ste h2{
+    font-size:4vw;    
+    }
     .zin, .zinn {
         width: 40%; /* Aangepaste breedte voor tekstblokken */
         height: 100vh;
@@ -143,16 +142,28 @@
         width: 30vw;
         height: auto;
         background-color: white;
-        display: inline-block;
+        display: flex;
         margin: 5px;
         border-radius: 5px;
         max-width:350px;
         max-height:3050px;
+        flex-direction: column;
+        align-items:center;
+        transition:0.12s;
     }
-    .thema h3 {
+    .themass h3 {
         color: #2ab6ff;
+        font-size:3.5vw;
+        font-weight:bold;
+    }
+    .titel {
+        color: #fff176;
         font-size:3vw;
         font-weight:bold;
+        animation: scrolll linear;
+        animation-timeline: view();
+        animation-range-end:500px;
+        animation-range-start:-100px;
     }
     .thema p {
         color: #63c9ff;
@@ -171,12 +182,13 @@
     }
     .hero {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    width: 100%;
-}
+    height:100vh;
+    //width:101vh;
+    flex-direction:column;
+    margin-top:-9vh;
+    }
     button{
     font-size:2.5vw;
     }
@@ -216,6 +228,21 @@
     max-width:35px;
     max-height:35px;
     }
+    .icoon {
+    width:10vw;
+    height:10vw;
+    z-index:4;
+    transition:0.12s;
+    }
+    .tekstthema {
+    background-color:#fff176;
+    height:auto;
+    width:100%;
+    flex-grow: 1;
+    border-radius: 5px;
+    z-index:5;
+    transition: all 0.5s ease-in-out;
+    }
 </style>
 
 </head>
@@ -229,7 +256,7 @@
     <br>
     <br>
     <br>
-    <a href="https://lrsw.w3spaces.com/FeestFabriek.html#themass"><button>Koop een feestpakket</button></a>
+    <a href="https://larsweb.w3spaces.com/bdayr.html#themass"><button>Koop een feestpakket</button></a>
     </div>
     <div class="vanbuiten">
     <div class="ste">
@@ -271,71 +298,147 @@
     <h2>Onze Thema's</h2>
     <br>
     <div id="themass" class="container">
-        <div onclick="uitleg('superhelden')" class="thema" id="superhelden"><h3>Superhelden</h3>
-        <p>Willen jij en je vrienden ook een superheld worden van Team M?</p>
+        <div>
+        <div onclick="uitleg('superhelden')" class="thema" id="superhelden">
+        <img class="icoon"src="https://static.thenounproject.com/png/4159954-200.png"></img>
+        <div class="tekstthema">
+        <!--<p>Willen jij en je vrienden ook een superheld worden van Team M?</p>-->
         <p>leeftijd: 7-9 jaar</p>
         <p>duur: 1.5 uur</p>
+        <p>binnen & buiten</p>
+        <p>4-8 kinderen</p>
         <p>prijs: €15</p>
         </div>
-        <div onclick="uitleg('dino')" class="thema" id="dino"><h3>Dino's</h3>
-        <p>Helpen jullie dino Barrie zijn vriend Jefry terug te vinden?</p>
+        </div>
+        <h3 class="titel">superhelden</h3>
+        </div>
+        <div>
+        <div onclick="uitleg('dino')" class="thema" id="dino">
+        <!--<h3>Dino's</h3>
+        <p>Helpen jullie dino Barrie zijn vriend Jefry terug te vinden?</p>-->
+        <img class="icoon" src="https://static.thenounproject.com/png/684747-200.png"></img>
+        <div class="tekstthema">
         <p>leeftijd: 5-7 jaar</p>
         <p>duur: 1 uur</p>
+        <p>binnen & buiten</p>
+        <p>3-7 kinderen</p>
         <p>prijs: €13</p>
         </div>
-        <div onclick="uitleg('Piraten')" class="thema" id="Piraten"><h3>Piraten</h3>
-        <p>Gaan jullie samen met Kapitein Jack op missie?</p>
+        </div>
+        <h3 class="titel">Dino's</h3>
+        </div>
+        <div>
+        <div onclick="uitleg('Piraten')" class="thema" id="Piraten">
+        <!--<h3>Piraten</h3>
+        <p>Gaan jullie samen met Kapitein Jack op missie?</p>-->
+        <img class="icoon" src="https://cdn.dribbble.com/users/398671/screenshots/3551141/media/966035ff8f492b2d899f05b939ea77fe.jpg?resize=400x300&vertical=center"></img>
+        <div class="tekstthema">
         <p>leeftijd: 7-10 jaar</p>
         <p>duur: 1.5 uur</p>
-        <p>prijs: €15</p></div>
-        <div onclick="uitleg('Eenhoorns')" class="thema" id="Eenhoorns"><h3>Eenhoorns</h3>
-        <p>Kom mee naar wonderland, het land van de eenhoorns!</p>
+        <p>binnen & buiten</p>
+        <p>4-8 kinderen</p>
+        <p>prijs: €15</p>
+        </div>
+        </div>
+        <h3 class="titel">Piraten</h3>
+        </div>
+        <div>
+        <div onclick="uitleg('Eenhoorns')" class="thema" id="Eenhoorns">
+        <!--<h3>Eenhoorns</h3>
+        <p>Kom mee naar wonderland, het land van de eenhoorns!</p>-->
+        <img src="https://static.thenounproject.com/png/78104-200.png" class="icoon"></img>
+        <div class="tekstthema">
         <p>leeftijd: 6-9 jaar</p>
         <p>duur: 1.5 uur</p>
-        <p>prijs: €15</p></div>
-        <div onclick="uitleg('Prinsessen')" class="thema" id="Prinsessen"><h3>Prinsessen</h3>
-        <p>Worden jullie ook een prinses en helpen jullie prinses Julia?</p>
+        <p>binnen & buiten</p>
+        <p>4-8 kinderen</p>
+        <p>prijs: €15</p></div></div>
+        <h3 class="titel">Eenhoorns</h3>
+        </div>
+        <div>
+        <div onclick="uitleg('Prinsessen')" class="thema" id="Prinsessen">
+        <!--<h3>Prinsessen</h3>
+        <p>Worden jullie ook een prinses en helpen jullie prinses Julia?</p>-->
+        <img src="https://cdn4.iconfinder.com/data/icons/royal-crowns/154/royal-princess-corona-crown-512.png" class="icoon" id="pricon"></img>
+        <div class="tekstthema">
         <p>leeftijd: 7-10 jaar</p>
         <p>duur: 1.5 uur</p>
+        <p>binnen & buiten</p>
+        <p>4-8 kinderen</p>
         <p>prijs: €15</p>
         </div>
-        <div onclick="uitleg('ruimte')" class="thema" id="ruimte"><h3>Ruimte</h3>
-        <p>Gaan jullie mee op reis naar een geheimzinnige planeet?</p>
+        </div>
+        <h3 class="titel">Prinsessen</h3>
+        </div>
+        <div>
+        <div onclick="uitleg('ruimte')" class="thema" id="ruimte">
+        <!--<h3>Ruimte</h3>
+        <p>Gaan jullie mee op reis naar een geheimzinnige planeet?</p>-->
+        <img src="https://cdn.iconscout.com/icon/free/png-256/free-space-1963537-1657041.png" class="icoon"></img>
+        <div class="tekstthema">
         <p>leeftijd: 7-11 jaar</p>
         <p>duur: 1.5 uur</p>
+        <p>binnen & buiten</p>
+        <p>4-8 kinderen</p>
         <p>prijs: €15</p>
         </div>
-        <div onclick="uitleg('jungle')" class="thema" id="jungle"><h3>Jungle</h3>
-        <p>Ontdekken jullie samen met Max de jungle?</p>
+        </div>
+        <h3 class="titel">Ruimte</h3>
+        </div>
+        <div>
+        <div onclick="uitleg('jungle')" class="thema" id="jungle">
+        <!--<h3>Jungle</h3>
+        <p>Ontdekken jullie samen met Max de jungle?</p>-->
+        <img src="https://static.thenounproject.com/png/3968685-200.png" class="icoon"></img>
+        <div class="tekstthema">
         <p>leeftijd: 7-11 jaar</p>
         <p>duur: 1.5 uur</p>
+        <p>binnen & buiten</p>
+        <p>4-8 kinderen</p>
         <p>prijs: €15</p>
         </div>
-        <div onclick="uitleg('circus')" class="thema" id="circus"><h3>Circus</h3>
-        <p>Wordt een echte clown en beleef een zot avontuur met clown Bollie!</p>
+        </div>
+        <h3 class="titel">Jungle</h3>
+        </div>
+        <div>
+        <div onclick="uitleg('circus')" class="thema" id="circus">
+        <!--<h3>Circus</h3>
+        <p>Wordt een echte clown en beleef een zot avontuur met clown Bollie!</p>-->
+        <img src="https://cdn.icon-icons.com/icons2/3002/PNG/512/circus_icon_188055.png" class="icoon"></img>
+        <div class="tekstthema">
         <p>leeftijd: 5-7 jaar</p>
         <p>duur: 1 uur</p>
+        <p>binnen & buiten</p>
+        <p>3-7 kinderen</p>
         <p>prijs: €13</p>
         </div>
-        <div onclick="uitleg('sporten')" class="thema" id="sport"><h3>Sporten</h3>
-        <p>Worden jullie echte top-sporters en winnen jullie de olympische spelen?</p>
+        </div>
+        <h3 class="titel">Circus</h3>
+        </div>
+        <div>
+        <div onclick="uitleg('sporten')" class="thema" id="sport">
+        <!--<h3>Sporten</h3>
+        <p>Worden jullie echte top-sporters en winnen jullie de olympische spelen?</p>-->
+        <img src="https://cdn-icons-png.freepik.com/512/4163/4163761.png" class="icoon"></img>
+        <div class="tekstthema">
         <p>leeftijd: 10-12 jaar</p>
         <p>duur: 2 uur</p>
+        <p>binnen & buiten</p>
+        <p>4-8 kinderen</p>
         <p>prijs: €17</p>
+        </div>
+        </div>
+        <h3 class="titel">Sporten</h3>
         </div>
     </div>
     <br>
     <h1>meer info</h1>
-       <br>
     <h2>Na de betaling</h2>
     <p>na betaling ontvangt u binnen de 24 uur een digitaale handleiding voor de ouders en een toegangscode voor de website.</p>
     <p>In de handleiding wordt uitgbebreid uitgelegd wat de ouders moeten klaarzetten en organiseren zodat alles goed verloopt.</p>
     <p>De toegangscode kan 2 keer worden gebruikt. 1 keer voor te testen, 1 keer voor op het feestje. Na het feest vervalt de toeganscode en kan deze niet meer gebruikt worden.</p>
-    <br>
     <h2>Over het feest</h2>
     <p>Voor al onze feestpakketten is er minstens 1 begeleider nodig.</p>
-    <p>alle spellen kunnen binnen en buiten worden gespeelt.</p>
-    <p>Alle feestpakketten zijn geschikt voor 4-10 kinderen.</p>
     <br>
     <br>
     <h2>contact</h2>
@@ -349,4 +452,4 @@
         function uitleg(hetthema){
         }
     </script>
-</body> 
+</body>  
